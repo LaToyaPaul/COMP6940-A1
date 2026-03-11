@@ -87,30 +87,15 @@ git clone https://github.com/aaanthonyyy/COMP6940-A1.git && cd COMP6940-A1
 Using `uv` (recommended):
 
 ```bash
-uv venv .venv
-source .venv/bin/activate
+uv sync
 ```
 
+  
 Or using `pip`:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-```
-
-1. **Install dependencies**
-
-Using `uv` (recommended):
-
-> ENsure you have uv.lock in your repository.
-
-```bash
-uv sync
-```
-
-Using `pip`:
-
-```bash
 pip install -r requirements.txt
 ```
 
@@ -137,3 +122,5 @@ Then open and run each notebook in sequence:
 | `01_ingest.ipynb`         | Downloads raw Parquet and CSV files via `requests`, saves to `data/raw/`, prints row counts, column lists, data types, and null counts                        |
 | `02_clean_features.ipynb` | Applies 6 cleaning rules with a before/after removal table, engineers all required fields, saves curated dataset to `data/curated/part1_taxi_curated.parquet` |
 | `03_stats_eda_viz.ipynb`  | Computes all groupby and window metrics using Pandas, answers 3 EDA questions with quantitative evidence, produces exactly 4 required plots                   |
+
+
